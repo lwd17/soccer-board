@@ -1,0 +1,28 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>连通性测试</title><style>
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;
+background:#f6f5f1;color:#22232a}
+.w{max-width:620px;margin:0 auto;padding:48px 20px}
+h1{font-size:22px;margin:0 0 6px}p{margin:0 0 14px;color:#56554f}
+.ok{display:inline-block;padding:3px 10px;border-radius:4px;background:#e7efeb;color:#2d5a4a;
+font-weight:600}
+code{font-family:ui-monospace,Menlo,monospace;background:#e9e7e0;padding:1px 5px;border-radius:3px}
+#js{color:#a33528}
+@media(prefers-color-scheme:dark){body{background:#141519;color:#e7e6e1}
+p{color:#8f8d86}.ok{background:#1e2b26;color:#7fb9a1}code{background:#2a2c32}}
+</style><div class="w">
+<h1>连通性测试</h1>
+<p><span class="ok">这一页打开了</span> 说明 GitHub Pages 和你的网络都正常。</p>
+<p id="js">JavaScript 没有运行。</p>
+<p id="wc">—</p>
+<p>如果这一页正常而 <code>/soccer-board/</code> 仍然转圈不停,问题就在加密层或浏览器缓存,
+不在托管。先试 <code>Ctrl-Shift-R</code> 强制刷新。</p>
+<p id="t">—</p>
+</div><script>
+document.getElementById('js').textContent='JavaScript 正常运行。';
+document.getElementById('js').style.color='';
+const wc = (window.crypto && window.crypto.subtle) ? '可用' : '不可用';
+document.getElementById('wc').textContent='浏览器加密接口(解密所必需):' + wc;
+document.getElementById('t').textContent='页面加载于 ' + new Date().toLocaleString();
+</script></html>
